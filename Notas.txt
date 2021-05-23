@@ -1,0 +1,67 @@
+//SEO FRONTEND
+"<em>” e “<i>”, solo modifica el texto para nosotros, pero “<em>”, le notifica al SEO de google que el texto de alli es relevante
+
+Los motores de búsqueda considerarán tu contenido como palabras clave importantes para influir en los rankings de búsqueda de la página (SEO).
+
+//CSS 
+Flex-grow: 4; | indica la capacidad de crecer de un elemento | NO nros negativos 
+flex-shrink: 2; | indica la capacidad de encocejerce de un elemento | NO nros negativos
+align-self: flex-end; | anula la posicion predeterminada o especificada por align items | alinea solo el elemento en particular
+
+opacity: 50%; define la opacidad del elemento
+outline: none | linea o borde de botone o inputs
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: white;
+
+//ARQUITECTURA CSS
+Los objetivos son:
+
+Predecible > Escribir reglas claras.
+Reutilizable > No escribir codigo redundante.
+Mantenible > Que sea facil de leer y adaptarnos a los estandares.
+Escalable > Que pueda crecer facilmente pero sin afectar el rendimiento.
+Buenas practicas
+
+Establecer reglas para que el equipo se entienda.
+Explicar la estructura base o dar los fundamentos del proyecto a un nuevo integrante.
+Evitar hojas de estilo muy extensas
+Tener una buena documentación explicando ciertos aspectos del codigo.
+
+//shortcut
+cmd + f = buscador por palabras en visual studio
+
+//CARRUSEL
+.carrusel{
+    width: 100%;
+    overflow: scroll;
+    padding: 30px;
+    position: relative;
+}
+.carrusel-container{
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom: 10px;
+}
+.carrusel-item{
+    width: 200px;
+    height: 250px;
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+}
+.carrusel-item:hover ~ .carrusel-item{
+    transform: translate3d(100px, 0, 0);
+}
+.carrusel-container:hover ~ .carrusel-item{
+    opacity: 0.3;
+}
+.carrusel-container:hover .carrusel-item:hover{
+    transform: scale(1.5);
+    opacity: 1;s
+}
